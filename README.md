@@ -1,19 +1,19 @@
 # AI-Powered Email Automation System (AEAS)
 
 ![Make.com](https://img.shields.io/badge/Platform-Make.com-6D00F6?style=flat-square&logo=make)
-![Gemini API](https://img.shields.io/badge/AI-Gemini%201.5%20Flash-4285F4?style=flat-square&logo=google)
+![Gemini API](https://img.shields.io/badge/AI-Gemini%202.5%20Flash-4285F4?style=flat-square&logo=google)
 ![Google Sheets](https://img.shields.io/badge/Database-Google%20Sheets-34A853?style=flat-square&logo=googlesheets)
 ![Gmail API](https://img.shields.io/badge/Delivery-Gmail%20Drafts-EA4335?style=flat-square&logo=gmail)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
 
-An automated end-to-end B2B email generation pipeline built on **Make.com**, connecting **Google Sheets**, **Google Gemini 1.5 Flash API**, and **Gmail**. The system monitors new and qualified prospect leads, synthesizes hyper-personalized outreach drafts tailored to specific pain points, and records audit states in Google Sheets with human-in-the-loop review.
+An automated end-to-end B2B email generation pipeline built on **Make.com**, connecting **Google Sheets**, **Google Gemini 2.5 Flash API**, and **Gmail**. The system monitors new and qualified prospect leads, synthesizes hyper-personalized outreach drafts tailored to specific pain points, and records audit states in Google Sheets with human-in-the-loop review.
 
 ---
 
 ## 🌟 Key Features
 
 - **Automated Lead Intake**: Polling engine watches Google Sheets for rows marked `Draft_Status = Pending`.
-- **Context-Aware Prompt Engineering**: Supplies lead metadata (role, industry, pain points, value proposition) into Gemini 1.5 Flash.
+- **Context-Aware Prompt Engineering**: Supplies lead metadata (role, industry, pain points, value proposition) into Gemini 2.5 Flash.
 - **Structured JSON Synthesis**: Utilizes Gemini's native `responseMimeType: "application/json"` to generate validated subject lines, HTML bodies, and plain-text fallbacks.
 - **Human-In-The-Loop Drafts**: Creates drafts directly in Gmail instead of auto-sending, allowing one-click review and personalization touches before dispatch.
 - **State Synchronization & Audit Trail**: Updates each Google Sheet row with timestamp, draft ID, and status (`Draft Created`), preventing duplicate generation.
@@ -24,7 +24,7 @@ An automated end-to-end B2B email generation pipeline built on **Make.com**, con
 
 ```text
 ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────────┐
-│  Google Sheets  │ ----> │    Make.com     │ ----> │  Gemini 1.5 Flash   │
+│  Google Sheets  │ ----> │    Make.com     │ ----> │  Gemini 2.5 Flash   │
 │ (Pending Leads) │       │ (Orchestrator)  │       │ (JSON Prompt Model) │
 └─────────────────┘       └────────┬────────┘       └──────────┬──────────┘
                                    │                           │

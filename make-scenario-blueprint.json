@@ -50,7 +50,7 @@
         "handleErrors": false
       },
       "mapper": {
-        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={{gemini_api_key}}",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={{gemini_api_key}}",
         "method": "POST",
         "headers": [
           {
@@ -58,7 +58,7 @@
             "value": "application/json"
           }
         ],
-        "body": "{\n  \"system_instruction\": {\n    \"parts\": [\n      {\n        \"text\": \"You are an elite B2B email copywriter. Write highly personalized, concise (<125 words) outreach emails based strictly on the prospect metadata. Respond strictly in valid JSON format with keys: 'subject', 'body_plain', 'body_html', 'reasoning'.\"\n      }\n    ]\n  },\n  \"contents\": [\n    {\n      \"role\": \"user\",\n      \"parts\": [\n        {\n          \"text\": \"Lead Details:\\n- Name: {{1.Recipient_Name}}\\n- Email: {{1.Recipient_Email}}\\n- Company: {{1.Company_Name}}\\n- Role: {{1.Company_Role}}\\n- Industry: {{1.Industry}}\\n- Pain Points: {{1.Context_Pain_Points}}\\n- Offer: {{1.Offer_Angle}}\\n\\nGenerate the tailored cold email in JSON.\"\n        }\n      ]\n    }\n  ],\n  \"generationConfig\": {\n    \"temperature\": 0.4,\n    \"topP\": 0.95,\n    \"maxOutputTokens\": 1024,\n    \"responseMimeType\": \"application/json\"\n  }\n}",
+        "body": "{\n  \"system_instruction\": {\n    \"parts\": [\n      {\n        \"text\": \"You are an elite B2B email copywriter. Write highly personalized, concise (<125 words) outreach emails based strictly on the prospect metadata. Respond strictly in valid JSON format with keys: 'subject', 'body_plain', 'body_html', 'reasoning'.\"\n      }\n    ]\n  },\n  \"contents\": [\n    {\n      \"role\": \"user\",\n      \"parts\": [\n        {\n          \"text\": \"Lead Details:\\n- Name: {{1.Recipient_Name}}\\n- Email: {{1.Recipient_Email}}\\n- Company: {{1.Company_Name}}\\n- Role: {{1.Company_Role}}\\n- Industry: {{1.Industry}}\\n- Pain Points: {{1.Context_Pain_Points}}\\n- Offer: {{1.Offer_Angle}}\\n\\nGenerate the tailored cold email in JSON.\"\n        }\n      ]\n    }\n  ],\n  \"generationConfig\": {\n    \"temperature\": 0.4,\n    \"topP\": 0.95,\n    \"maxOutputTokens\": 4096,\n    \"responseMimeType\": \"application/json\"\n  }\n}",
         "serializeUrl": false,
         "shareCookies": false,
         "parseResponse": true

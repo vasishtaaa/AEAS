@@ -42,7 +42,7 @@ This guide walks you through importing and configuring the **AI-Powered Email Au
 1. Click on **Module 2 (Generate Draft with Gemini API)**.
 2. In the **URL** field, replace `{{gemini_api_key}}` with your actual Google AI Studio API key:
    ```
-   https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=YOUR_ACTUAL_API_KEY
+   https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=YOUR_ACTUAL_API_KEY
    ```
 3. Ensure:
    - **Method**: `POST`

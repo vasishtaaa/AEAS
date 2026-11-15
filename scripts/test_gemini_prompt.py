@@ -31,7 +31,7 @@ def test_prompt_direct():
         import urllib.error
         requests = None
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
     
     payload = {
         "system_instruction": {
@@ -68,7 +68,7 @@ def test_prompt_direct():
         "generationConfig": {
             "temperature": 0.4,
             "topP": 0.95,
-            "maxOutputTokens": 1024,
+            "maxOutputTokens": 4096,
             "responseMimeType": "application/json"
         }
     }
