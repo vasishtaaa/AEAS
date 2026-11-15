@@ -1,0 +1,4 @@
+Lead_ID,Recipient_Name,Recipient_Email,Company_Name,Industry,Company_Role,Context_Pain_Points,Offer_Angle,Draft_Status,Generated_Subject,Generated_Body,Draft_ID,Last_Updated
+LEAD-001,Sarah Jenkins,sarah.jenkins@acmefintech.io,Acme FinTech,Financial Services,VP of Growth,"High customer acquisition costs, struggling with lead follow-up speed","Automated CRM lead nurturing with 2-minute response time",Pending,,,,
+LEAD-002,David Chen,david.chen@cloudnexus.dev,CloudNexus,DevOps / SaaS,Head of Engineering,"Manual code review bottlenecks, long CI/CD pipeline turnaround times","AI-augmented PR summarization and preliminary code scans",Pending,,,,
+LEAD-003,Elena Rostova,elena@vanguardretail.com,Vanguard Retail,E-Commerce,Director of Marketing,"Low email newsletter open rates, customer churn post first purchase","Hyper-personalized dynamic re-engagement campaigns",Pending,,,,

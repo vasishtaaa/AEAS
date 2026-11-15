@@ -1,0 +1,25 @@
+{
+  "system_instruction": {
+    "parts": [
+      {
+        "text": "You are an elite B2B email copywriter. Generate personalized, concise (under 125 words) outreach emails strictly based on the lead context provided. Return response strictly formatted as a valid JSON object with keys: 'subject', 'body_plain', 'body_html', 'reasoning'."
+      }
+    ]
+  },
+  "contents": [
+    {
+      "role": "user",
+      "parts": [
+        {
+          "text": "Generate a personalized email draft for the following prospect:\n\n- Name: {{1.Recipient_Name}}\n- Email: {{1.Recipient_Email}}\n- Company: {{1.Company_Name}}\n- Role: {{1.Company_Role}}\n- Industry: {{1.Industry}}\n- Pain Points: {{1.Context_Pain_Points}}\n- Offer Angle: {{1.Offer_Angle}}\n\nRespond strictly with valid JSON conforming to:\n{\n  \"subject\": \"...\",\n  \"body_plain\": \"...\",\n  \"body_html\": \"...\",\n  \"reasoning\": \"...\"\n}"
+        }
+      ]
+    }
+  ],
+  "generationConfig": {
+    "temperature": 0.4,
+    "topP": 0.95,
+    "maxOutputTokens": 1024,
+    "responseMimeType": "application/json"
+  }
+}
